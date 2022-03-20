@@ -7,6 +7,8 @@ namespace EventDriven
 {
     public class TriggerEventExample : MonoBehaviour, IEventListener<GameEvent>
     {
+        [SerializeField] private GameEventsTypes _eventsTypes;
+
         private void OnEnable()
         {
             this.StartListening<GameEvent>();
@@ -22,10 +24,10 @@ namespace EventDriven
             Debug.Log(data.EventTypes);
         }
 
-        [ContextMenu("TriggerEvent")]
-        public void TriggerEvent()
+        [ContextMenu("Trigger Test Event")]
+        public void TriggerTestEvent()
         {
-            EventManager.TriggerEvent(new GameEvent(GameEventsTypes.LevelStart));
+            EventManager.TriggerEvent(new GameEvent(_eventsTypes));
         }
     }
 }
