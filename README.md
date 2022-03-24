@@ -5,7 +5,7 @@ Use this plugin to create events in Unity using interfaces as a listener.
 This interface will allow the specific class to listen to an event.
  
 ```c#
- public class TestListener : MonoBehavior, IEventListener<GameEvent>
+ public class TestListener : MonoBehaviour, IEventListener<GameEvent>
  {
       private void OnEnable(){
           //Start listening to this event once the object is enabled.
@@ -55,7 +55,7 @@ This interface will allow the specific class to listen to an event.
  For example, we can have a GameManager and trigger the event once the level is loaded.
  
  ```c#
- public class GameManager : MonoBehavior
+ public class GameManager : MonoBehaviour
  {
       public void LevelStarted(){
          EventManager.TriggerEvent(new GameEvent(GameEventsTypes.LevelStart));
