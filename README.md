@@ -30,7 +30,7 @@ This interface will allow the specific class to listen to an event.
  In this example we're making this moobehaviour to listen to a GameEvent event. You can create whichever type of event you want, we recommend using the [EventList.cs](https://github.com/Danilock/Event-Driven-Unity/blob/main/Event%20Driven%20System/EventList.cs) but you can create the event wherever you want.
  
  # Example of an event
- **IMPORTANT**: Game events have to be structures.
+ **IMPORTANT**: Game events must be structures.
  
  ```c#
  using UnityEngine;
